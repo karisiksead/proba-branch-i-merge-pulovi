@@ -1,6 +1,8 @@
 .main-card {
   display: flex;
-  width: 40%;
+  margin: auto;
+  margin-top: 50px;
+  width: 30vw;
   background-color: antiquewhite;
   padding: 30px;
   font-size: 1.5em;

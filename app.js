@@ -35,38 +35,33 @@ const btnRight = document.getElementById("btn-right");
 
 var trenutniZaposleni = 0;
 
-window.addEventListener("DOMContentLoaded", function () {
-  let radnik = zaposleni[trenutniZaposleni];
-  slika.src = radnik.img;
-  imePrezime.textContent = radnik.name;
-  posao.textContent = radnik.job;
-  opisPosla.textContent = radnik.opis;
-});
+// ucitavanje stranice i jednog radnika
+window.addEventListener("DOMContentLoaded", ucitavanjeRadnika());
+
+// Next button i f-ja ucitavanje radnika
 btnRight.addEventListener("click", function () {
   if (trenutniZaposleni < zaposleni.length - 1) {
     trenutniZaposleni++;
   } else {
     trenutniZaposleni = 0;
   }
-  let radnik = zaposleni[trenutniZaposleni];
-  slika.src = radnik.img;
-  imePrezime.textContent = radnik.name;
-  posao.textContent = radnik.job;
-  opisPosla.textContent = radnik.opis;
-  console.log(trenutniZaposleni);
+  ucitavanjeRadnika();
 });
 
+// Prev button i f-ja ucitavanje radnika
 btnLeft.addEventListener("click", function () {
   if (trenutniZaposleni > 0) {
     trenutniZaposleni--;
   } else {
     trenutniZaposleni = zaposleni.length - 1;
   }
-
+  ucitavanjeRadnika();
+});
+// f-ja za ucitavanje radnika
+function ucitavanjeRadnika() {
   let radnik = zaposleni[trenutniZaposleni];
   slika.src = radnik.img;
   imePrezime.textContent = radnik.name;
   posao.textContent = radnik.job;
   opisPosla.textContent = radnik.opis;
-  console.log(trenutniZaposleni);
-});
+}
