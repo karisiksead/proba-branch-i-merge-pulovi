@@ -1,4 +1,18 @@
-h1 {
-  font-weight: 800;
-  color: blue;
+.main-card {
+  display: flex;
+  width: 40%;
+  background-color: antiquewhite;
+  padding: 30px;
+  font-size: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 30%;
+}
+button {
+  width: 100px;
+  padding: 5px;
+  font-size: 0.8em;
 }
