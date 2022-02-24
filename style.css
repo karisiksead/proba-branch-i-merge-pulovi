@@ -10,11 +10,24 @@
   justify-content: center;
   align-items: center;
 }
+
 img {
   width: 30%;
 }
+
 button {
   width: 100px;
+  margin: 0 30px;
   padding: 5px;
   font-size: 0.8em;
+}
+h4 {
+  text-transform: uppercase;
+}
+
+#btn-any {
+  display: flex;
+  margin: 10px auto;
+  width: 300px;
+  justify-content: center;
 }

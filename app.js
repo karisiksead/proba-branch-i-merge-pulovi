@@ -32,6 +32,7 @@ const opisPosla = document.getElementById("jobDescription");
 
 const btnLeft = document.getElementById("btn-left");
 const btnRight = document.getElementById("btn-right");
+const btnAny = document.getElementById("btn-any");
 
 var trenutniZaposleni = 0;
 
@@ -65,3 +66,9 @@ function ucitavanjeRadnika() {
   posao.textContent = radnik.job;
   opisPosla.textContent = radnik.opis;
 }
+
+btnAny.addEventListener("click", function () {
+  trenutniZaposleni = Math.floor(Math.random() * zaposleni.length);
+  ucitavanjeRadnika();
+  console.log(trenutniZaposleni);
+});
